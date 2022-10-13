@@ -1,0 +1,5 @@
+1. jika gagal 'npm install mongoose', gunakan 'npm install -s mongoose'
+2. memasukkan file kedalam github
+    - git init
+    - buat file .gitIgnore
+    - 
