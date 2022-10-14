@@ -2,4 +2,13 @@
 2. memasukkan file kedalam github
     - git init
     - buat file .gitIgnore
-    - 
+    - git add
+    - git commit -m "this is message"
+    - buar repository baru di github
+    - push an existing repository from the command line
+      - git remote add origin https://github.com/fauzariawan/Mybrary.git
+3. deploy ke heroku
+   - install terlebih dahulu heroku-cli
+   - login ke heroku dari terminal using "heroku login"
+   - heroku git:remote -a fauza-mybrary
+4. agar bisa baca payload dari body form harus install "npm i body-parser"

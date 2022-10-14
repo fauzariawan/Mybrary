@@ -8,6 +8,7 @@ const expressLayouts = require('express-ejs-layouts');
 const indexRouter = require('./routes')
 const port = 3000
 const mongoose = require('mongoose');
+const bodyParser = require('body-parser') // untuk menerima kiriman body dari form ejs
 
 mongoose.connect(process.env.DATABASE_URL,
   {
@@ -27,6 +28,7 @@ db.once('open', () => console.log('Connected to Mongoose'))
  app.set('layout', 'layouts/layout')
  app.use(expressLayouts)
  app.use(express.static('public'))
+ app.use(bodyParser.urlencoded({limit:'10mb', extended:false})) // untuk menerima kiriman body dari form ejs
 
  app.use('/', indexRouter)
 
