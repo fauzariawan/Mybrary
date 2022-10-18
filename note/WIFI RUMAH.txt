@@ -1,0 +1,3 @@
+USER = KONTRAKAN
+PASS = jangansembarangan
+PASS_ADMIN = jangansembarangan
