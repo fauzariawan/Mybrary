@@ -4,11 +4,39 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://unpkg.com/filepond/dist/filepond.css" rel="stylesheet" />
+  <link href="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css" rel="stylesheet"/>
   <title>My Library</title>
 </head>
 <body>
-    <%- include('../partials/header.ejs') %>
-    <%- include('../partials/errorMessage.ejs') %>
-    <%- body %>
+  <%- include('../partials/header.ejs') %>
+  <%- include('../partials/errorMessage.ejs') %>
+  <%- body %>
+  
+  <!-- <script> FilePond.registerPlugin(FilePondPluginFileEncode)</script>
+  <script> FilePond.registerPlugin(FilePondPluginImagePreview)</script>
+  <script>
+    // Register the plugin
+    FilePond.registerPlugin(FilePondPluginImageResize);
+
+    // ... FilePond initialisation code here
+  </script> -->
+  <script src="https://unpkg.com/filepond-plugin-file-encode/dist/filepond-plugin-file-encode.js"></script>
+  <script src="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.js"></script>
+  <script src="https://unpkg.com/filepond-plugin-image-resize/dist/filepond-plugin-image-resize.js"></script>
+  <script src="https://unpkg.com/filepond/dist/filepond.js"></script>
+  <script> FilePond.registerPlugin(FilePondPluginFileEncode)</script>
+  <script> FilePond.registerPlugin(FilePondPluginImagePreview)</script>
+  <script> FilePond.registerPlugin(FilePondPluginImageResize)</script>
+  <!-- untuk mengubah ukuran gambar yang akan ditampilkan -->
+  <script> FilePond.setOptions({
+    stylePanelAspectRatio: 150/100,
+    imageResizeTargetWidth: 100,
+    imageResizeTargetHeight: 150
+  }) </script>
+  <!-- <script src="javascripts/fileUpload.js"></script> -->
+  <script> FilePond.parse(document.body)</script>
 </body>
+
+
 </html>
