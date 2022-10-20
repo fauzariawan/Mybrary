@@ -92,7 +92,6 @@ router.put('/:id', async (req, res) => {
         errorMessage: 'Error Updating Author'
       })
     }
-    
   }
 })
 
