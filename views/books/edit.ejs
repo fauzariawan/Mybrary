@@ -7,7 +7,7 @@
 </form> -->
 
 <%- // mengirim gambar menggunakan filepond tidak membutuhkan  enctype="multipart/form-data" %>
-<h2>Edit Book</h2>
+<h2 class="page-header">Edit Book</h2>
 <form action="/books/<%= book.id%>?_method=PUT" method="POST">
   <%- include('form_field') %>
   <a href="/books">Cancel</a>
