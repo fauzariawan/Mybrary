@@ -117,6 +117,7 @@ router.post('/',async (req, res)=>{
 
 // show book routes
 router.get('/:id', async (req, res)=>{
+  console.log('masuk ke rooter books')
   try {
     const book = await Book.findById(req.params.id).populate('author').exec()
     res.render('books/show',{book})

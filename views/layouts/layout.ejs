@@ -26,14 +26,15 @@
   <script src="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.js"></script>
   <script src="https://unpkg.com/filepond-plugin-image-resize/dist/filepond-plugin-image-resize.js"></script>
   <script src="https://unpkg.com/filepond/dist/filepond.js"></script>
+  
   <script> FilePond.registerPlugin(FilePondPluginFileEncode)</script>
   <script> FilePond.registerPlugin(FilePondPluginImagePreview)</script>
   <script> FilePond.registerPlugin(FilePondPluginImageResize)</script>
   <!-- untuk mengubah ukuran gambar yang akan ditampilkan -->
   <script> FilePond.setOptions({
-    stylePanelAspectRatio: 150/100,
-    imageResizeTargetWidth: 100,
-    imageResizeTargetHeight: 150
+    stylePanelAspectRatio: 1/0.75,
+    imageResizeTargetWidth: 325,
+    imageResizeTargetHeight: 325/0.75
   }) </script>
   <!-- <script src="javascripts/fileUpload.js"></script> -->
   <script> FilePond.parse(document.body)</script>
